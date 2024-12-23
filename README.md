@@ -1,4 +1,4 @@
-# Mini E-Commerce Project
+# Mini Merchant-Product Microservices Project
 
 Proyek ini adalah implementasi sederhana dari sistem e-commerce menggunakan Java 17 dan Maven. Proyek ini mencakup beberapa teknologi dan fitur seperti Spring IoC, Java Stream, Native SQL Query, Redis Caching, dan PostgreSQL. Dokumentasi API dapat diakses melalui Swagger atau melalui Postman Collection yang tersedia di dalam folder `resources`.
 
