@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    hostname: discoveryserver
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://discoveryserver:8761/eureka
+server:
+  port: 8761

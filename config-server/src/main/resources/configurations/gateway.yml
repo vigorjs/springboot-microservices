@@ -1,0 +1,28 @@
+eureka:
+  client:
+    register-with-eureka: false
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: products
+          uri: http://products:8082
+          predicates:
+            - Path=/api/v1/products/**
+        - id: merchants
+          uri: http://merchants:8081
+          predicates:
+            - Path=/api/v1/merchants/**
+
+server:
+  port: 8080
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

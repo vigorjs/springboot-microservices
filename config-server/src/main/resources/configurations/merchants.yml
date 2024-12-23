@@ -1,0 +1,31 @@
+eureka:
+  instance:
+    hostname: discoveryserver
+  client:
+    service-url:
+      defaultZone: http://discoveryserver:8761/eureka
+
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://postgres-merchants:5432/merchants
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  config:
+    products-url: http://products:8082/api/v1/products
+
+management:
+  tracing:
+    enabled: true
+    sampling:
+      probability: 1.0

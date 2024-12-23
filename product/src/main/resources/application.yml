@@ -1,0 +1,6 @@
+#Spring
+spring:
+  application:
+    name: products
+  config:
+    import: optional:configserver:http://config-server:8888
